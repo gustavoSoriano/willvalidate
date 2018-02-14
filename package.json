@@ -1,0 +1,9 @@
+{
+  "name": "willvalidate",
+  "version": "1.0.0",
+  "homepage": "https://github.com/gustavoSoriano/willvalidate",
+  "description": "Validation Forms",
+  "main": "willvalidate.js",
+  "keywords": ["vuejs","validate","form"],
+  "license": "ISC"
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Demo willvalidate</title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+	</head>
+
+	<body>
+	  <div class="container">
+		<form name="cadastro" class="card px-3 py-3" novalidate>
+		  <div class="row">
+			<div class="col-md form-group">
+			  <label for="nome" class="form-control-label">Nome completo</label>
+			  <input id="nome" name="nome" errorMessage="Por favor, informe seu nome" class="form-control" minlength="5" required>
+			</div>
+
+			<div class="col-md form-group">
+			  <label for="email" class="form-control-label">E-mail</label>
+			  <input id="email" name="email" type="email" class="form-control" required>
+			</div>
+		  </div>
+
+		  <div class="row">
+			<div class="col-md form-group">
+			  <label for="cpf" class="form-control-label">CPF Ex: ###.###.###-##</label>
+			  <input id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" name="cpf" type="text" class="form-control" required>
+			</div>
+
+			<div class="col-md form-group">
+			  <label for="idade" class="form-control-label">Idade</label>
+			  <input id="idade" min="16" name="idade" type="number" class="form-control" required>
+			</div>
+			
+			<div class="col-md-2 form-group">
+			  <label for="sexo" class="form-control-label">Sexo</label>
+			  <select id="sexo" name="sexo" class="form-control" required>
+				<option selected disabled hidden></option>
+				<option value="M">Masculino</option>
+				<option value="F">Feminino</option>
+			  </select>
+			</div>
+		  </div>
+
+		  <div class="mt-1">
+			<button type="submit" class="btn btn-primary">Salvar</button>
+			<button type="reset" class="btn btn-secondary">Limpar</button>
+		  </div>
+		</form>
+	  </div>
+
+	  <script src="./dist/willvalidate.js"></script>
+	  <script>
+		  const form = document.cadastro
+
+		  form.addEventListener('submit', e => {
+			e.preventDefault()
+			
+			if (!willvalidate(form)) return
+			alert("Form Válido")
+		  })
+
+		  form.addEventListener('reset', e => clearErrors(form) )
+	  </script>
+	</body>
+</html>
