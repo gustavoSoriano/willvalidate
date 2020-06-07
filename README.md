@@ -2,6 +2,8 @@
 
 > Validation Forms
 
+Available in [awesome-vue](https://github.com/vuejs/awesome-vue/blob/master/README.md) 
+
 ## Setup
 #### Install dependencies
 ``` 
