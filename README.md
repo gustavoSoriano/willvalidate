@@ -2,7 +2,10 @@
 
 > Validation Forms
 
-Available in [awesome-vue](https://github.com/vuejs/awesome-vue/blob/master/README.md) 
+Available in [awesome-vue](https://github.com/vuejs/awesome-vue/blob/master/README.md)
+<br>
+Available in [npm](https://www.npmjs.com/package/willvalidate) 
+
 
 ## Setup
 #### Install dependencies
@@ -11,7 +14,7 @@ npm install willvalidate --save
 ``` 
 
 #### Into main.js vuejs (Single File Components)
-``` 
+```js
 import Vue from 'Vue'
 import willvalidate from 'willvalidate'
 Vue.use(willvalidate)
@@ -19,7 +22,7 @@ Vue.use(willvalidate)
 
 ## Usage
 #### Ex: within methods 
-```
+```js
 export default {
   methods:{
     sendForm()
@@ -31,7 +34,7 @@ export default {
 ``` 
 
 ## Or in script tag
-```
+```html
 <script src="./PATH/node_modules/willvalidate/dist/willvalidate.js"></script>
 ```
 
@@ -41,7 +44,7 @@ Ex: require, maxlength, minlength, type, pattern, min, max and others
 ```
 
 ## Customize
-```
+```html
 # error class 
 .has-danger{}
 
